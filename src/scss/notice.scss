@@ -1,0 +1,73 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.notice {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: $blue2;
+  padding: 15px 50px 15px 15px;
+  box-shadow: 0 -7px 7px -5px rgba(0,0,0, 0.2);
+  z-index: 30;
+  @media screen and (min-width: 540px) {
+    padding: 20px 80px 20px 30px;
+  }
+  @media screen and (min-width: $tablet1) {
+    display: flex;
+    justify-content: center;
+  }
+
+  &.none {
+    display: none;
+  }
+
+  &__info {
+    position: relative;
+    font-size: 4vw;
+    font-weight: 500;
+    line-height: 1.5em;
+    padding-left: 73px;
+    @media screen and (min-width: 540px) {
+      font-size: 3vw;
+    }
+    @media screen and (min-width: $tablet1) {
+      font-size: 20px;
+      max-width: 480px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 58px;
+      height: 58px;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background: url("../img/icon-screen.svg") no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0.3s;
+    cursor: pointer;
+    @media screen and (min-width: 540px) {
+      right: 30px;
+    }
+
+    &:hover {
+      opacity: 0.8;
+      transition: opacity 0.3s;
+    }
+
+    & svg {
+      fill: $white;
+    }
+  }
+}

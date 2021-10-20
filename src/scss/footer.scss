@@ -1,0 +1,115 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20vw 0;
+  @media screen and (min-width: 540px) {
+    padding: 17vw 0;
+  }
+  @media screen and (min-width: $tablet1) {
+    padding: 120px 0 150px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 110%;
+    background: url("../img/secrion-v-bg.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    opacity: 0.09;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: -5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 110%;
+    background: linear-gradient(to bottom, rgba(19, 53, 140, 1) 0%, rgba(19, 53, 140, 0) 25%, rgba(19, 53, 140, 0) 75%, rgba(19, 53, 140, 1) 100%);
+    z-index: 1;
+  }
+
+  & .section {
+    &__wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__footer {
+      &-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5vw;
+        background-color: transparent;
+        border: 1px solid $white;
+        padding: 5vw 8vw;
+        transition: background-color 0.3s, color 0.3s;
+        z-index: 2;
+        @media screen and (min-width: 540px) {
+          font-size: 4vw;
+          padding: 4vw 7vw;
+        }
+        @media screen and (min-width: $tablet1) {
+          font-size: 30px;
+          padding: 32px 42px;
+        }
+
+        &:hover {
+          color: $blue1;
+          background-color: $white;
+          transition: background-color 0.3s, color 0.3s;
+        }
+      }
+
+      &-image {
+        z-index: 2;
+        margin-top: 15vw;
+        @media screen and (min-width: 540px) {
+          margin-top: 10vw;
+        }
+        @media screen and (min-width: $tablet1) {
+          margin-top: 70px;
+        }
+
+        & img {
+          &:nth-child(1) {
+            width: 25vw;
+            margin-right: 5vw;
+            @media screen and (min-width: 540px) {
+              width: 20vw;
+            }
+            @media screen and (min-width: $tablet1) {
+              width: 160px;
+            }
+          }
+
+          &:nth-child(2) {
+            width: 45vw;
+            @media screen and (min-width: 540px) {
+              width: 35vw;
+            }
+            @media screen and (min-width: $tablet1) {
+              width: 270px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

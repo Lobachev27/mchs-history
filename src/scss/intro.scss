@@ -1,0 +1,91 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.intro {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: $blue1;
+  width: 100%;
+  height: 100vh;
+
+  & .section {
+    &__bg {
+      position: absolute;
+      width: 60%;
+      height: 100%;
+      top: 0;
+      right: 0;
+
+      &:before {
+        content: '';
+        position: absolute;
+        background: linear-gradient(to right, $blue1 0%, rgba(35, 80, 184, 0.5) 50%, rgba(35, 80, 184, 0) 100%);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        object-fit: cover;
+      }
+    }
+  }
+
+  & .title.title-h1 {
+    font-size: 10vw;
+    @media screen and (min-width: $tablet1) {
+      font-size: 60px;
+    }
+  }
+
+  &__description {
+    font-size: 5vw;
+    font-weight: 500;
+    line-height: 1.25em;
+    width: 100%;
+    margin-top: 2vw;
+    @media screen and (min-width: $tablet1) {
+      font-size: 30px;
+      margin-top: 10px;
+    }
+  }
+
+  &__scroll {
+    position: relative;
+    font-size: 4vw;
+    font-weight: 400;
+    width: max-content;
+    margin-top: 15vw;
+    @media screen and (min-width: 540px) {
+      margin-top: 10vw;
+    }
+    @media screen and (min-width: $tablet1) {
+      font-size: 16px;
+      margin-top: 70px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 3vw;
+      height: 4vw;
+      top: 50%;
+      right: -5vw;
+      transform: translateY(-50%);
+      background: url("../img/icon-scroll.svg") no-repeat;
+      background-position: center;
+      background-size: contain;
+      animation: scroll .6s ease-in alternate infinite;
+      @media screen and (min-width: $tablet1) {
+        width: 12px;
+        height: 16px;
+        right: -22px;
+      }
+    }
+  }
+}

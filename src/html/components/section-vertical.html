@@ -1,0 +1,51 @@
+<section id="@@context.id" class="section section-vertical @@context.class">
+  <div class="section__wrap">
+    <ul class="section__list">
+      @@for (var i = 0; i < context.arr.length; i++) {
+      <li id="`+context.arr[i].id+`" class="section__item">
+        <div class="section__line"></div>
+        <div class="section__item-img">
+          <img src="`+context.arr[i].img+`" alt="">
+          <a href="`+context.arr[i].link+`"></a>
+        </div>
+        <div class="section__item-info">
+          <div class="section__item-date">`+context.arr[i].date+`</div>
+          <a class="section__item-caption" href="`+context.arr[i].link+`">`+context.arr[i].caption+`</a>
+          <div class="section__item-description">`+context.arr[i].description+`</div>
+        </div>
+      </li>
+      }
+    </ul>
+    @@if (context.footer) {
+    <div class="section__appeal">
+      <div class="section__appeal-left">
+        <div class="section__appeal-img">
+          <img src="./img/image-33.jpg" alt="">
+        </div>
+        <div class="section__appeal-person">
+          <div class="section__appeal-person-name">Е.Н. Зиничев</div>
+          <div class="section__appeal-person-position">министр Российской Федерации по делам гражданской обороны, чрезвычайным ситуациям и ликвидации последствий стихийных бедствий</div>
+        </div>
+      </div>
+      <div class="section__appeal-right">
+        <div class="section__appeal-caption">Дорогие коллеги!</div>
+        <div class="section__appeal-description">
+          Три десятилетия сотрудники Министерства плечом к плечу борются с пожарами и наводнениями, ликвидируют последствия техногенных катастроф и стихийных бедствий, как на территории России, так и за ее пределами.<br><br>
+          Каждый день мы демонстрируем высокую готовность оказывать помощь, нарабатываем бесценный опыт спасения человеческих жизней, оттачиваем профессионализм и мастерство, укрепляем кадровый потенциал, внедряем новейшие технологии спасения.<br><br>
+          В 1990 году все начиналось с создания корпуса спасателей, насчитывающего несколько десятков энтузиастов. Сегодня МЧС России – это 300 тысяч специалистов самых разных профессий: спасатели, пожарные, горноспасатели, водолазы, летчики, кинологи, врачи, психологи и пиротехники.<br><br>
+          В распоряжении МЧС России находятся современная техника и оборудование, которые делают структуру мощной и эффективной, способной противостоять любым угрозам и реально помогать людям.<br><br>
+          Но главная наша гордость – это люди. В МЧС России работают смелые и неравнодушные к чужому горю люди. Наша работа – не просто принадлежность к той или иной профессии, это образ жизни.<br><br>
+          Примите мои поздравления с 30-летием Министерства и искренние слова благодарности за ваш благородный труд. С юбилеем вас, друзья!
+        </div>
+      </div>
+    </div>
+    <div class="section__footer">
+      <a class="section__footer-link" href="#intro">Перейти в начало</a>
+      <div class="section__footer-image">
+        <img src="./img/logo-f1.svg" alt="">
+        <img src="./img/logo-f2.svg" alt="">
+      </div>
+    </div>
+    }
+  </div>
+</section>

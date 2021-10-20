@@ -1,0 +1,69 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.header {
+  &-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 44px;
+    height: 44px;
+    background-color: $blue1;
+    z-index: 100;
+    cursor: pointer;
+    backface-visibility: hidden;
+    transition: background-color .5s ease-in;
+    will-change: background-color, color;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    @media screen and (min-width: 540px) {
+      width: 70px;
+      height: 70px;
+    }
+    @media screen and (min-width: $tablet1) {
+      width: 90px;
+      height: 90px;
+    }
+    @media screen and (min-width: $tablet2) {
+      background-color: transparent !important;
+    }
+
+    &.active {
+      background-color: rgba(35, 80, 184, 0);
+
+      & svg {
+        transform: translate(-50%, -50%) rotate(0deg);
+        transition: transform 0.5s, opacity 0.5s;
+        /*@media screen and (min-width: 540px) {
+          transform: translate(-50%, -50%) rotate(0deg);
+        }*/
+      }
+    }
+
+    &:hover {
+      & svg {
+        opacity: 0.8;
+      }
+    }
+
+    & svg {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      fill: $white;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(90deg);
+      transition: transform 0.5s, opacity 0.5s;
+      opacity: 1;
+      @media screen and (min-width: 540px) {
+        /*transform: translate(-50%, -50%) rotate(90deg);*/
+        width: 40px;
+        height: 40px;
+      }
+      @media screen and (min-width: $tablet1) {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}

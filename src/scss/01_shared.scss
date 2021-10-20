@@ -1,0 +1,162 @@
+@import "partials/params";
+@import "partials/mixins";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  background-color: $blue1;
+  color: $white;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  overflow-x: hidden;
+
+  /*overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;*/
+}
+
+main {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: $blue1;
+  z-index: 2;
+  backface-visibility: hidden;
+  transition: background-color .5s ease-in;
+  will-change: background-color, color;
+
+  @media screen and (min-width: $desktop1) {
+    display: none;
+  }
+
+  & .section__wrap {
+    width: 100%;
+    max-width: 992px;
+    padding: 0 15px;
+    margin: 0 auto;
+    z-index: 2;
+    @media screen and (min-width: 540px) {
+      padding: 0 30px;
+    }
+    @media screen and (min-width: $tablet1) {
+      padding: 0 70px;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: $white;
+  line-height: 1.2em;
+  padding: 0;
+  margin: 0;
+}
+
+div {
+  color: $white;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: $white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*.container {
+  position: relative;
+  width: 100%;
+  max-width: 992px;
+  padding: 0 15px;
+  margin: 0 auto;
+  z-index: 2;
+}*/
+
+/*#wrap {
+  !*position: relative;*!
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  flex: 1;
+}*/
+
+/*
+header {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+}
+
+.sad {
+  position: relative;
+  display: flex;
+  width: 6000px;
+  justify-content: flex-start;
+  align-items: center;
+
+  & div {
+    position: relative;
+    width: 2000px;
+    border: 1px solid crimson;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.section {
+  !*position: absolute;*!
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 30px;
+  !*bottom: 0;
+  right: 0;*!
+
+
+  &.one {background-color: crimson}
+  &.two {
+    background-color: gold;
+    height: 150vh;
+  }
+  &.three {
+    background-color: cornflowerblue;
+    height: 100vh;
+    width: 6000px;
+    display: flex;
+    !*width: 3000px;*!
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &.four {background-color: lightslategrey}
+}
+*/

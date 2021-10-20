@@ -1,0 +1,19 @@
+<section class="news">
+  <div class="section__wrap">
+    <ul class="section__list">
+      @@for (var i = 0; i < context.arr.length; i++) {
+      <li id="`+context.arr[i].id+`" class="section__item" data-scroll data-bg="`+context.arr[i].bg+`" data-scroll-repeat="true" data-scroll-call="updateBg">
+        <div class="section__item-info">
+          <div class="section__item-date">`+context.arr[i].date+`</div>
+          <a class="section__item-caption" href="`+context.arr[i].link+`">`+context.arr[i].caption+`</a>
+          <div class="section__item-description">`+context.arr[i].description+`</div>
+        </div>
+        <div class="section__item-img">
+          <img src="`+context.arr[i].img+`" alt="">
+          <a href="`+context.arr[i].link+`"></a>
+        </div>
+      </li>
+      }
+    </ul>
+  </div>
+</section>

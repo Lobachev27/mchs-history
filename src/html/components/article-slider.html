@@ -1,0 +1,17 @@
+<div class="article__slider">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      @@for (var i = 0; i < context.arr.length; i++) {
+      <div class="swiper-slide"><a class="article__img" data-fslightbox="gallery1" href="`+context.arr[i]+`"><img src="`+context.arr[i]+`" alt=""></a></div>
+      }
+    </div>
+  </div>
+  <div class="article__slider-navigation">
+    <div class="swiper-button-prev">
+      <img src="./img/slider-arrow.svg">
+    </div>
+    <div class="swiper-button-next">
+      <img src="./img/slider-arrow.svg">
+    </div>
+  </div>
+</div>

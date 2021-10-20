@@ -1,0 +1,23 @@
+<section id="@@context.id" class="section section-horizontal @@context.class">
+  <div class="section__wrap">
+    <div class="section__bg">
+      <img src="@@context.image" alt="">
+    </div>
+    <ul class="section__list">
+      @@for (var i = 0; i < context.arr.length; i++) {
+      <li id="`+context.arr[i].id+`" class="section__item">
+        <div class="section__line"></div>
+        <div class="section__item-img">
+          <img src="`+context.arr[i].img+`" alt="">
+          <a href="`+context.arr[i].link+`"></a>
+        </div>
+        <div class="section__item-info">
+          <div class="section__item-date">`+context.arr[i].date+`</div>
+          <a class="section__item-caption" href="`+context.arr[i].link+`">`+context.arr[i].caption+`</a>
+          <div class="section__item-description">`+context.arr[i].description+`</div>
+        </div>
+      </li>
+      }
+    </ul>
+  </div>
+</section>
